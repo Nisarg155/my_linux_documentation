@@ -1,33 +1,50 @@
-# FZF Documentation 
 
-## Installation 
+---
 
-1. **For apt use the following command** 
-    
-   ```  sudo apt install ```
+# FZF Documentation
 
-## Key Bindings set up in zsh
+## Installation
 
-1. **Add this following to the ~/.zshrc to enable keybindings**
-   > **source   /usr/share/doc/fzf/examples/key-bindings.zsh**
-2. **Add the following line to ~/.zshrc enable  auto-completion of zsh**
-   >**source /usr/share/doc/fzf/examples/completion.zsh**
+### For Debian-based Systems
+To install `fzf` using `apt`, use the following command:
+
+```bash
+sudo apt install fzf
+```
+
+## Key Bindings Setup in zsh
+
+1. **Enable Key Bindings**  
+   Add the following line to `~/.zshrc` to enable key bindings:
+
+   ```bash
+   source /usr/share/doc/fzf/examples/key-bindings.zsh
+   ```
+
+2. **Enable Auto-Completion**  
+   Add this line to `~/.zshrc` to enable auto-completion in zsh:
+
+   ```bash
+   source /usr/share/doc/fzf/examples/completion.zsh
+   ```
 
 ## Search Syntax
 
- | Token     | Match type                              | Description                                  |
- |-----------|-----------------------------------------|----------------------------------------------|
- | `sbtrkt`  | fuzzy-match                             | Items that match `sbtrkt`                    |
- | `'wild`   | exact-match (quoted)                    | Items that include `wild`                    |
- | `'wild'`  | exact-boundary-match (quoted both ends) | Items that include `wild` at word boundaries |
- | `^music`  | prefix-exact-match                      | Items that start with `music`                |
- | `.mp3$`   | suffix-exact-match                      | Items that end with `.mp3`                   |
- | `!fire`   | inverse-exact-match                     | Items that do not include `fire`             |
- | `!^music` | inverse-prefix-exact-match              | Items that do not start with `music`         |
- | `!.mp3$`  | inverse-suffix-exact-match              | Items that do not end with `.mp3`            |
+| Token     | Match Type                              | Description                                      |
+|-----------|-----------------------------------------|--------------------------------------------------|
+| `sbtrkt`  | Fuzzy-match                             | Matches items that contain `sbtrkt`              |
+| `'wild`   | Exact-match (quoted)                    | Matches items that include `wild` exactly        |
+| `'wild'`  | Exact-boundary-match (quoted both ends) | Matches items that include `wild` at boundaries  |
+| `^music`  | Prefix-exact-match                      | Matches items that start with `music`            |
+| `.mp3$`   | Suffix-exact-match                      | Matches items that end with `.mp3`               |
+| `!fire`   | Inverse-exact-match                     | Matches items that do not include `fire`         |
+| `!^music` | Inverse-prefix-exact-match              | Matches items that do not start with `music`     |
+| `!.mp3$`  | Inverse-suffix-exact-match              | Matches items that do not end with `.mp3`        |
 
-## Key Bindings and Usages
+## Key Bindings and Usage
 
->
-> **use write \*\* in terminal and use key binding "``` Ctrl-T```"  to open fzf window and select any using enter**
+1. **Opening fzf Window**  
+   Type `**` in the terminal, then use the key binding `Ctrl-T` to open the `fzf` window.  
+   Use the `Enter` key to select an item from the list.
 
+--- 
