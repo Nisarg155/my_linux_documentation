@@ -14,6 +14,16 @@ trap "echo -e '\n${RED}Script interrupted by user. Exiting...${RESET}'; exit 1" 
 echo -e "${BLUE}Updating package index...${RESET}"
 sudo apt update
 
+# Ensure ~/.zsh_aliases is sourced in ~/.zshrc
+echo -e "${BLUE}Checking if ~/.zsh_aliases is sourced in ~/.zshrc...${RESET}"
+if ! grep -q '\. ~/.zsh_aliases' ~/.zshrc; then
+    echo "# Source the aliases" >> ~/.zshrc
+    echo '. ~/.zsh_aliases' >> ~/.zshrc
+    echo -e "${GREEN}Sourced ~/.zsh_aliases in ~/.zshrc${RESET}"
+else
+    echo -e "${YELLOW}~/.zsh_aliases is already sourced in ~/.zshrc${RESET}"
+fi
+
 # Creating alias file
 echo -e "${BLUE}Checking if ~/.zsh_aliases exists...${RESET}"
 if [ ! -f ~/.zsh_aliases ]; then
