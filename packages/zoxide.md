@@ -22,7 +22,7 @@ sudo apt install zoxide
    ```
 
 2. **Aliases Setup**
-   Add the following line to `~/.zsh_aliaces` to set up alias with `cd`
+   Add the following line to `~/.zsh_aliases` to set up alias with `cd`
 
    ```bash
    alias cd="z"
